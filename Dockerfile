@@ -15,7 +15,7 @@ ARG CLANG_VERSION="248d9ce8765248d953c3e5ef4022fb350bbe6c51"
 ARG LLVM_VERSION="757e18f722dbdcd98b8479e25041b1eee1128ce9"
 
 # rust-xtensa
-ARG RUSTC_VERSION="b365cff41a60df8fd5f1237ef71897edad0375dd"
+ARG RUSTC_VERSION="cce631a5a49c327eb301c9d65a17a39d7863da64"
 
 # -------------------------------------------------------------------
 # Toolchain Path Config
@@ -58,6 +58,8 @@ RUN apt-get update \
        python \
        python-pip \
        wget \
+       pkg-config \
+       libssl-dev \
  && rm -rf /var/lib/apt/lists/*
 
 # -------------------------------------------------------------------
